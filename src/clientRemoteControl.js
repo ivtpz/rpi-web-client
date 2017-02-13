@@ -46,14 +46,17 @@ $(document).ready(() => {
       case 38:
         clientSocket.emit('on');
         break;
-      case 40:
+      case 39:
         clientSocket.emit('onYellow');
         break;
       case 37:
         clientSocket.emit('onRed');
         break;
-      case 39:
+      case 40:
         clientSocket.emit('flash');
+        break;
+      case 68:
+        clientSocket.emit('dance');
         break;
       default:
         clientSocket.emit('off');
@@ -65,7 +68,7 @@ $(document).ready(() => {
       case 38:
         clientSocket.emit('off');
         break;
-      case 40:
+      case 39:
         clientSocket.emit('offYellow');
         break;
       case 37:
