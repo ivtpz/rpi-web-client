@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="janus.nojquery.js" ></script>
   <script src="bundle.js"></script>
   <title>Remote Control</title>
 </head>
@@ -11,5 +13,14 @@
   <h2>Controls</h2>
   <h3>Press down on up, left or right to turn on</h3>
   <h3>Release to turn off</h3>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Remote Video #1 <span class="label label-info hide" id="remote1"></span></h3>
+      </div>
+      <div class="panel-body relative" id="videoremote1"></div>
+    </div>
+  </div>
 </body>
 </html>

@@ -14,6 +14,6 @@ app.get('/', function(req, res) {
   res.sendFile(path.resolve('index.html'));
 })
 
-app.listen(4444, function() {
-  console.log('listening on 4444');
+app.listen(80, function() {
+  console.log('listening on 80');
 });
