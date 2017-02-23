@@ -3,9 +3,12 @@ import $ from 'jquery';
 import token from '../secretToken.js'
 
 // Connect to socket
-const clientSocket = io.connect('http://127.0.0.1:3000', {
+const clientSocket = io(window.location.href, {
   query: 'token=' + token
 });
+clientSocket.on('connect', function() {
+  console.log(clientSocket);
+})
 
 // Set up janus
 var opaqueId = "videoroomtest-"+Janus.randomString(12);
@@ -18,7 +21,7 @@ $(document).ready(() => {
      debug: true,
      callback: function() {
        janus = new Janus({
-         server: 'http://127.0.0.1:8088/janus',
+         server: '/janus',
          success: function() {
            janus.attach({
              plugin: 'janus.plugin.videoroom',
