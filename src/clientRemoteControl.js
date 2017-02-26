@@ -295,15 +295,19 @@ $(document).ready(() => {
   $(document).keydown(e => {
     switch (e.which) {
       case 38:
+        e.preventDefault();
         clientSocket.emit('on');
         break;
       case 39:
+        e.preventDefault();
         clientSocket.emit('onYellow');
         break;
       case 37:
+        e.preventDefault();
         clientSocket.emit('onRed');
         break;
       case 40:
+        e.preventDefault();
         clientSocket.emit('flash');
         break;
       case 68:
